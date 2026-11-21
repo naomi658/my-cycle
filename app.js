@@ -172,10 +172,10 @@
           '<svg viewBox="0 0 180 180" aria-hidden="true">' +
             '<defs>' +
               '<linearGradient id="gRose" x1="0" y1="0" x2="1" y2="1">' +
-                '<stop offset="0%" stop-color="#FFAD92"/><stop offset="55%" stop-color="#FF8CA1"/><stop offset="100%" stop-color="#F2546E"/>' +
+                '<stop offset="0%" stop-color="#FFB49C"/><stop offset="55%" stop-color="#FF7E9B"/><stop offset="100%" stop-color="#E8345C"/>' +
               '</linearGradient>' +
               '<linearGradient id="gMint" x1="0" y1="0" x2="1" y2="1">' +
-                '<stop offset="0%" stop-color="#8FEBD3"/><stop offset="55%" stop-color="#43D3B5"/><stop offset="100%" stop-color="#12A88C"/>' +
+                '<stop offset="0%" stop-color="#96F0DC"/><stop offset="55%" stop-color="#3FDDBE"/><stop offset="100%" stop-color="#0FAE90"/>' +
               '</linearGradient>' +
             '</defs>' +
             '<circle class="ring-bg" cx="90" cy="90" r="' + R + '"/>' +
@@ -512,7 +512,7 @@
       '<div class="card-title">최근 주기 길이 <span class="sub">평균 ' + avg + '일</span></div>' +
       '<div class="chartwrap"><svg class="chart" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="최근 주기 길이 막대 그래프">' +
         '<defs><linearGradient id="gBar" x1="0" y1="0" x2="0" y2="1">' +
-          '<stop offset="0%" stop-color="#FF8CA1"/><stop offset="100%" stop-color="#F2546E"/></linearGradient></defs>' +
+          '<stop offset="0%" stop-color="#FF8FA6"/><stop offset="100%" stop-color="#CB3050"/></linearGradient></defs>' +
         '<line class="axis" x1="' + padL + '" y1="' + (H - bottom) + '" x2="' + (W - padR) + '" y2="' + (H - bottom) + '"/>' +
         '<line class="avgl" x1="' + padL + '" y1="' + ay.toFixed(1) + '" x2="' + (W - padR) + '" y2="' + ay.toFixed(1) + '"/>' +
         bars + labels +
@@ -758,7 +758,7 @@
       var p = st.pending;
       var w = '';
       if (p.warnings && p.warnings.length) {
-        w = '<div class="info" style="color:#B26A16;margin-top:8px">' + p.warnings.map(esc).join('<br>') + '</div>';
+        w = '<div class="info" style="color:var(--amber);margin-top:8px">' + p.warnings.map(esc).join('<br>') + '</div>';
       }
       var desc = p.source === 'my-cycle'
         ? '내 백업 파일 · ' + p.periods + '개 구간 · ' + p.days + '일'
