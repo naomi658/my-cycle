@@ -179,7 +179,7 @@
               '</linearGradient>' +
             '</defs>' +
             '<circle class="ring-bg" cx="90" cy="90" r="' + R + '"/>' +
-            '<circle class="ring-fg" cx="90" cy="90" r="' + R + '" stroke="url(#' + grad + ')" stroke-dasharray="' + circ.toFixed(1) + '" stroke-dashoffset="' + off + '"/>' +
+            (kind === 'empty' ? '' : '<circle class="ring-fg" cx="90" cy="90" r="' + R + '" stroke="url(#' + grad + ')" stroke-dasharray="' + circ.toFixed(1) + '" stroke-dashoffset="' + off + '"/>') +
           '</svg>' +
           '<div class="ring-center">' +
             '<div class="ring-label">' + esc(label) + '</div>' +
@@ -316,7 +316,7 @@
     var sm = C.summary(S, today());
     var html = heroHTML(sm) + '<div class="spacer8"></div>' + scheduleCardHTML(sm) + todayRecordCard(sm);
     if (sm.kind === 'empty') {
-      html = heroHTML(sm) + '<div class="spacer8"></div>' + introCard() + scheduleCardHTML(sm);
+      html = heroHTML(sm) + '<div class="spacer8"></div>' + introCard();
     }
     return html;
   }
